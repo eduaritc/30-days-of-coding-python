@@ -1,12 +1,34 @@
+print("########################################")
+print("--- LEVEL 1 ---")
+print("########################################")
+
+
 def get_middle_item(my_collection):
     if len(my_collection) % 2 ==0:
         return len(my_collection) // 2 - 1
     else:
         return len(my_collection) // 2
-# 1. Unpack siblings and parents from family_members
+
+
+# 1. Create an empty tuple
+my_tuple = ()
+# 2. Create a tuple containing names of your sisters and your brothers (imaginary siblings are fine)
 brothers = ("Steve", "Bill", "Jeff", "Elon")
 sisters = ("Marie", "Judy", "Elsa", "sakura")
+# 3. Join brothers and sisters tuples and assign it to siblings
 siblings = sisters + brothers
+# 4. How many siblings do you have?
+print(len(siblings))
+# 5. Modify the siblings tuple and add the name of your father and mother and assign it to family_members
+family_members = tuple(list(siblings) + ["Anna", "Zeus"])
+print(family_members)
+
+print("########################################")
+print("--- LEVEL 2 ---")
+print("########################################")
+
+
+# 1. Unpack siblings and parents from family_members
 family_members = tuple(list(siblings) + ["Anna", "Zeus"])
 sis1, sis2, sis3, sis4, bro1, bro2, bro3, bro4, *parents = family_members
 print("{}, {}, {}, {}, {}, {}, {}, {}, {}, {}"
